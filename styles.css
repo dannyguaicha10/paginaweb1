@@ -1,84 +1,242 @@
-/* Estilos globales */
+:root {
+    --primary: #ff2a4b;
+    --primary-glow: rgba(255, 42, 75, 0.4);
+    --bg-color: #08090c;
+    --card-bg: #111319;
+    --text-color: #f1f1f1;
+    --text-dim: #9aa0a6;
+    --border-color: #1e222d;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f0f11;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 50px;
+    overflow-x: hidden;
 }
 
-/* Encabezado */
-header {
+/* Scrollbar roja personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+/* Encabezado Principal */
+.hero {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 60px 20px 40px;
+    background: radial-gradient(circle at top, rgba(255, 42, 75, 0.15) 0%, transparent 70%);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 42, 75, 0.15);
+    color: var(--primary);
+    border: 1px solid var(--primary-glow);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #e63946;
+    margin-bottom: 15px;
 }
 
-header p {
-    color: #a8a8a8;
-    margin-top: 8px;
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-/* Galería de autos */
-.cars-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1000px;
-    width: 100%;
-    justify-content: center;
+.hero-title .highlight {
+    color: var(--primary);
+    text-shadow: 0 0 20px var(--primary-glow);
 }
 
-/* Tarjetas */
-.car-card {
-    background-color: #1a1a1e;
-    border-radius: 12px;
-    overflow: hidden;
-    flex: 1 1 400px;
-    max-width: 480px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    border: 1px solid #2a2a2e;
-    transition: transform 0.3s ease;
+.hero-subtitle {
+    color: var(--text-dim);
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-.car-card:hover {
-    transform: translateY(-5px);
+.hero-subtitle .author {
+    color: #ffffff;
+    border-bottom: 2px solid var(--primary);
 }
 
-.car-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-}
-
-.car-info {
+/* Contenedor */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.car-info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
-.car-info p {
-    color: #b0b0b0;
-    font-size: 0.95rem;
-    line-height: 1.5;
+/* Rejilla de Autos */
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 30px var(--primary-glow);
+}
+
+.card-image-box {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.car-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover .car-img {
+    transform: scale(1.1);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(8, 9, 12, 0.8);
+    backdrop-filter: blur(8px);
+    color: var(--text-color);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.car-desc {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Especificaciones técnicas dentro de las tarjetas */
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spec-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-label {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+}
+
+.spec-val {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Sección Canva */
+.canva-container {
+    max-width: 850px;
+    margin: 70px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.canva-subtitle {
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    margin-top: -20px;
+}
+
+.canva-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 120%; /* Altura ajustada para el póster vertical */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+    transition: border-color 0.3s;
+}
+
+.canva-wrapper:hover {
+    border-color: var(--primary);
+}
+
+.canva-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+footer span {
+    color: var(--primary);
+    font-weight: 600;
 }
