@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
+    <title>Galería de Autos</title>
+    <!-- Vinculamos el archivo CSS separado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>¡Hola mundo!</h1>
-       <p>Danny Guaicha</p>
-    <p>Mi primera página publicada en GitHub.</p>
+
+    <header>
+        <h1>Mi Colección de Autos</h1>
+        <p>Dos grandes máquinas deportivas</p>
+    </header>
+
+    <main class="cars-container">
+        <!-- Tarjeta del Auto 1 -->
+        <div class="car-card">
+            <img class="car-image" src="imagenes/auto1.jpg" alt="BMW deportivo">
+            <div class="car-info">
+                <h2>BMW Deportivo</h2>
+                <p>Vehículo deportivo de alto rendimiento con diseño aerodinámico y motor potente.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta del Auto 2 -->
+        <div class="car-card">
+            <img class="car-image" src="imagenes/auto2.jpg" alt="Toyota moderno">
+            <div class="car-info">
+                <h2>Toyota Moderno</h2>
+                <p>Modelo moderno con excelente tecnología, eficiencia de combustible y gran elegancia.</p>
+            </div>
+        </div>
+    </main>
+
 </body>
 </html>
