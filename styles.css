@@ -85,11 +85,11 @@ header p strong {
     line-height: 1.5;
 }
 
-/* Sección Canva */
+/* Sección Canva (Ampliada para formato de presentación) */
 .canva-section {
     margin-top: 50px;
     width: 100%;
-    max-width: 800px;
+    max-width: 950px; /* Tamaño más ancho para visualizarlo cómodo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,10 +105,11 @@ header p strong {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 141.42%;
-    box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16);
-    border-radius: 8px;
+    padding-top: 56.25%; /* Proporción estándar 16:9 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     overflow: hidden;
+    border: 1px solid #2a2a2e;
 }
 
 .canva-box iframe {
@@ -122,7 +123,7 @@ header p strong {
 
 .canva-link {
     color: #a8a8a8;
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: 0.9rem;
     text-decoration: none;
 }
@@ -135,9 +136,4 @@ footer {
     margin-top: 50px;
     color: #666666;
     font-size: 0.85rem;
-}
-
-footer span {
-    color: var(--primary);
-    font-weight: 600;
 }
