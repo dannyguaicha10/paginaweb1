@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Autos</title>
-    <!-- Vinculamos el archivo CSS -->
+    <title>Galería de Autos | Danny Guaicha</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-        <h1>Mi Colección de Autos</h1>
-        <p>Dos grandes máquinas deportivas</p>
+        <span class="tag">Proyecto Web</span>
+        <h1>Galería de Autos</h1>
+        <p class="author">Diseñado por <span>Danny Guaicha</span></p>
     </header>
 
     <main class="cars-container">
-        <!-- Tarjeta del Auto 1 -->
+        <!-- Tarjeta 1 -->
         <div class="car-card">
-            <img class="car-image" src="imagenes/auto1.jpg" alt="BMW deportivo">
+            <div class="image-wrapper">
+                <img class="car-image" src="imagenes/auto1.jpg" alt="BMW deportivo">
+            </div>
             <div class="car-info">
+                <span class="badge">Deportivo #1</span>
                 <h2>BMW Deportivo</h2>
-                <p>Vehículo deportivo de alto rendimiento con diseño aerodinámico y motor potente.</p>
+                <p>Vehículo deportivo de alto rendimiento con diseño aerodinámico y motor de gran potencia.</p>
             </div>
         </div>
 
-        <!-- Tarjeta del Auto 2 -->
+        <!-- Tarjeta 2 -->
         <div class="car-card">
-            <img class="car-image" src="imagenes/auto2.jpg" alt="Toyota moderno">
+            <div class="image-wrapper">
+                <img class="car-image" src="imagenes/auto2.jpg" alt="Toyota moderno">
+            </div>
             <div class="car-info">
+                <span class="badge">Deportivo #2</span>
                 <h2>Toyota Moderno</h2>
-                <p>Modelo moderno con excelente tecnología, eficiencia de combustible y gran elegancia.</p>
+                <p>Modelo moderno con excelente tecnología, eficiencia de combustible y estética elegante.</p>
             </div>
         </div>
     </main>
 
-    <!-- Sección del diseño de Canva (Incrustado) -->
-    <section style="margin-top: 50px; width: 100%; max-width: 800px; display: flex; flex-direction: column; align-items: center;">
-        <h2 style="margin-bottom: 20px; color: #ffffff;">Presentación interactiva</h2>
-        
-        <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); overflow: hidden; border-radius: 8px; will-change: transform;">
-            <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-                src="https://www.canva.com/design/DAHVfBfIr8A/vHpb0FJl6Vp_fgNv85gROw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+    <!-- Presentación Canva Incrustada -->
+    <section class="canva-section">
+        <h2>Presentación Interactiva</h2>
+        <div class="canva-frame">
+            <iframe loading="lazy" 
+                src="https://www.canva.com/design/DAHVfBfIr8A/vHpb0FJl6Vp_fgNv85gROw/view?embed" 
+                allowfullscreen="allowfullscreen" allow="fullscreen">
             </iframe>
         </div>
-        <a href="https://www.canva.com/design/DAHVfBfIr8A/vHpb0FJl6Vp_fgNv85gROw/view?utm_content=DAHVfBfIr8A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" style="color: #a8a8a8; margin-top: 10px; font-size: 0.9rem;">Red and Black Modern Car Service Poster</a>
+        <a class="canva-link" href="https://www.canva.com/design/DAHVfBfIr8A/vHpb0FJl6Vp_fgNv85gROw/view?utm_content=DAHVfBfIr8A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
+            Póster de Servicio Automotriz - Danny Guaicha
+        </a>
     </section>
+
+    <footer>
+        <p>Publicado en GitHub Pages | © Danny Guaicha</p>
+    </footer>
 
 </body>
 </html>
