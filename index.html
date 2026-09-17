@@ -3,90 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny Guaicha | Garage Exclusivo</title>
-    <!-- Fuente moderna Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Galería de Autos | Danny Guaicha</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Encabezado Principal -->
-    <header class="hero">
-        <div class="hero-badge">Proyecto Web GitHub</div>
-        <h1 class="hero-title">GARAGE <span class="highlight">EXCLUSIVO</span></h1>
-        <p class="hero-subtitle">Colección presentada por <strong class="author">Danny Guaicha</strong></p>
+    <header>
+        <h1>Mi Colección de Autos</h1>
+        <p>Proyecto diseñado por <strong>Danny Guaicha</strong></p>
     </header>
 
-    <!-- Galería de Autos -->
-    <main class="container">
-        <h2 class="section-title">Modelos en Exhibición</h2>
-        
-        <div class="cars-grid">
-            <!-- Auto 1 -->
-            <article class="car-card">
-                <div class="card-image-box">
-                    <span class="card-tag">Superdeportivo</span>
-                    <img src="imagenes/auto1.jpg" alt="BMW Deportivo" class="car-img">
-                </div>
-                <div class="card-body">
-                    <h3>BMW Deportivo</h3>
-                    <p class="car-desc">Ingeniería de alta precisión, aerodinámica activa y rendimiento de pista sin concesiones.</p>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Motor</span>
-                            <span class="spec-val">V8 Biturbo</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Aceleración</span>
-                            <span class="spec-val">0-100 en 3.2s</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
+    <main class="cars-container">
+        <!-- Tarjeta del Auto 1 -->
+        <div class="car-card">
+            <img class="car-image" src="imagenes/auto1.jpg" alt="BMW deportivo">
+            <div class="car-info">
+                <h2>BMW Deportivo</h2>
+                <p>Vehículo deportivo de alto rendimiento con diseño aerodinámico y motor potente.</p>
+            </div>
+        </div>
 
-            <!-- Auto 2 -->
-            <article class="car-card">
-                <div class="card-image-box">
-                    <span class="card-tag">Alta Gama</span>
-                    <img src="imagenes/auto2.jpg" alt="Toyota Moderno" class="car-img">
-                </div>
-                <div class="card-body">
-                    <h3>Toyota Moderno</h3>
-                    <p class="car-desc">Tecnología de última generación combinada con un diseño agresivo, elegante y vanguardista.</p>
-                    <div class="specs-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Motor</span>
-                            <span class="spec-val">Híbrido High-Spec</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Eficiencia</span>
-                            <span class="spec-val">Deportiva</span>
-                        </div>
-                    </div>
-                </div>
-            </article>
+        <!-- Tarjeta del Auto 2 -->
+        <div class="car-card">
+            <img class="car-image" src="imagenes/auto2.jpg" alt="Toyota moderno">
+            <div class="car-info">
+                <h2>Toyota Moderno</h2>
+                <p>Modelo moderno con excelente tecnología, eficiencia de combustible y gran elegancia.</p>
+            </div>
         </div>
     </main>
 
-    <!-- Presentación Canva -->
-    <section class="canva-container">
-        <h2 class="section-title">Póster Interactivo</h2>
-        <p class="canva-subtitle">Diseño oficial por Danny Guaicha</p>
-        
-        <div class="canva-wrapper">
+    <!-- Sección del diseño de Canva -->
+    <section class="canva-section">
+        <h2>Presentación interactiva</h2>
+        <div class="canva-box">
             <iframe loading="lazy" 
                 src="https://www.canva.com/design/DAHVfBfIr8A/vHpb0FJl6Vp_fgNv85gROw/view?embed" 
-                allowfullscreen="allowfullscreen" 
-                allow="fullscreen">
+                allowfullscreen="allowfullscreen" allow="fullscreen">
             </iframe>
         </div>
+        <a class="canva-link" href="https://www.canva.com/design/DAHVfBfIr8A/vHpb0FJl6Vp_fgNv85gROw/view?utm_content=DAHVfBfIr8A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">
+            Ver diseño en Canva
+        </a>
     </section>
 
-    <!-- Pie de página -->
     <footer>
-        <p> 2026 <span>Danny Guaicha</p>
+        <p> Danny Guaicha</p>
     </footer>
 
 </body>
